@@ -1,0 +1,39 @@
+name: Deploy Matrix visual experiments to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - ".github/workflows/pages.yml"
+      - "README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: matrix-visual-experiments-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ vars.ENABLE_PAGES == 'true' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
