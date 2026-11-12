@@ -1,17 +1,21 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/FRONTEND-MATRIX_VISUAL_EXPERIMENTS-101010?style=for-the-badge&labelColor=050805&color=00FF41" alt="Matrix Visual Experiments"/>
+  <img src="https://img.shields.io/badge/HTML_CSS_CANVAS-BROWSER_PROTOTYPES-101010?style=for-the-badge&logo=html5&logoColor=00FF41" alt="HTML and Canvas"/>
+</p>
+
 # Matrix Visual Experiments
 
-Small personal frontend repository containing two standalone Matrix-inspired banner prototypes built with HTML, CSS and Canvas.
+Small frontend repository containing two standalone Matrix-inspired banner prototypes built with HTML, CSS and Canvas.
 
-## Live preview
+<p align="center">
+  <a href="https://github.com/tzayadet/HTML/tree/main/docs"><strong>SHOWCASE SOURCE</strong></a> ·
+  <a href="https://github.com/tzayadet/HTML"><strong>SOURCE CODE</strong></a>
+</p>
 
-When GitHub Pages is enabled for this repository, the landing page is available at:
-
-`https://tzayadet.github.io/HTML/`
-
-The landing page links to each independent experiment:
+## Experiments
 
 - [Animated Matrix](animatedmatrix.html): Canvas-based digital-rain animation with a text overlay.
-- [Matrix Banner](matrix1.html): static banner composition with gradients and a subtle Matrix-inspired texture.
+- [Matrix Banner](matrix1.html): banner composition with gradients and a subtle Matrix-inspired texture.
 
 ## Run locally
 
@@ -23,15 +27,21 @@ python -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## Stack
+## Technology
 
 - HTML5
 - CSS3
 - JavaScript
 - Canvas API
 
-These are visual prototypes, not production applications.
+## Scope
 
-## Publish the showcase
+Visual prototypes, not production applications.
 
-To publish the static site, open **Settings → Pages** and select **GitHub Actions** as the build source. Then add the repository Actions variable `ENABLE_PAGES=true` under **Settings → Secrets and variables → Actions → Variables**. A push to the repository root HTML files or a manual workflow run will deploy the site. Until Pages is enabled and the variable is set, the preview remains source-only.
+## Deployment
+
+A static Pages workflow can publish the showcase after Pages is enabled with GitHub Actions and the `ENABLE_PAGES=true` Actions variable is configured. Until then, use the source files locally.
+
+## License
+
+See [LICENSE](LICENSE) for the repository's licensing terms.
