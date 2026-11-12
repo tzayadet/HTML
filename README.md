@@ -31,3 +31,7 @@ Then visit `http://localhost:8000`.
 - Canvas API
 
 These are visual prototypes, not production applications.
+
+## Publish the showcase
+
+To publish the static site, open **Settings → Pages** and select **GitHub Actions** as the build source. Then add the repository Actions variable `ENABLE_PAGES=true` under **Settings → Secrets and variables → Actions → Variables**. A push to the repository root HTML files or a manual workflow run will deploy the site. Until Pages is enabled and the variable is set, the preview remains source-only.
